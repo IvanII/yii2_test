@@ -2,8 +2,6 @@
 
 namespace app\models;
 
-use Yii;
-use yii\db\ActiveRecord;
 use yii\data\ActiveDataProvider;
 use app\models\Lesson;
 use yii\db\Expression;
@@ -23,6 +21,8 @@ class LessonSearch extends Lesson
     }
 
     /**
+     * Rules for data of filters
+     *
      * @return array
      */
     public function rules()

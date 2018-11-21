@@ -7,20 +7,26 @@ use yii\db\ActiveRecord;
 use app\models\Group;
 
 /**
- * LoginForm is the model behind the login form.
- *
- * @property User|null $user This property is read-only.
- *
+ * Class Teacher
+ * @package app\models
  */
 class Teacher extends ActiveRecord
 {
+    /**
+     * @return string
+     */
     public static function tableName()
     {
         return '{{teachers}}';
     }
 
+    /**
+     * Relation with Group
+     *
+     * @return \yii\db\ActiveQuery
+     */
     public function getGroups()
     {
-        return $this->hasOne(Group::className(), ['group_id' => 'id']);
+        return $this->hasOne(Group::class, ['group_id' => 'id']);
     }
 }

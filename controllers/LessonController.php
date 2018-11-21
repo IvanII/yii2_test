@@ -3,16 +3,20 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
 use yii\web\Controller;
-use yii\web\Response;
-use yii\filters\VerbFilter;
-use yii\data\ActiveDataProvider;
-use app\models\Lesson;
 use app\models\LessonSearch;
 
+/**
+ * Class LessonController
+ * @package app\controllers
+ */
 class LessonController extends Controller
 {
+    /**
+     * Return Lesson list with Group and Teacher
+     *
+     * @return string
+     */
     public function actionIndex()
     {
         $searchModel = new LessonSearch();

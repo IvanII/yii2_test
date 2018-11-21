@@ -2,7 +2,6 @@
 
 namespace app\models;
 
-use Yii;
 use yii\db\ActiveRecord;
 use app\models\Lesson;
 use app\models\Teacher;
@@ -22,6 +21,8 @@ class Group extends ActiveRecord
     }
 
     /**
+     * Relation with Lesson
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getLessons()
@@ -30,6 +31,8 @@ class Group extends ActiveRecord
     }
 
     /**
+     * Relation with Teacher
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getTeacher()

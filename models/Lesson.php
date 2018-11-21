@@ -2,7 +2,6 @@
 
 namespace app\models;
 
-use Yii;
 use yii\db\ActiveRecord;
 use app\models\Group;
 
@@ -21,6 +20,8 @@ class Lesson extends ActiveRecord
     }
 
     /**
+     * Relation with Group
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getGroup()
